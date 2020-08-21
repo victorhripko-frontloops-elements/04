@@ -6,9 +6,39 @@
   <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
-  <title>Frontloops &mdash; ???</title>
+  <title>Frontloops &mdash; Progress navigation</title>
 </head>
 <body>
+  <div class="app">
+    <div class="app__nav">
+      <button class="app__step-button is-active" type="button" data-go="1">Choose title</button>
+      <button class="app__step-button" type="button" data-go="2">Choose description</button>
+      <button class="app__step-button" type="button" data-go="3">Confirm data</button>
+    </div>
+    <div class="app__step-content is-active" data-go-item="1">
+      <h5 class="app__title">Choose title content</h5>
+      <div class="app__buttons">
+        <button class="btn" type="button" data-go="next">Submit title</button>
+      </div>
+    </div>
+    <div class="app__step-content" data-go-item="2">
+      <h5 class="app__title">Choose descriptio content</h5>
+      <div class="app__buttons">
+        <button class="btn" type="button" data-go="prev">Back</button>
+        <button class="btn" type="button" data-go="next">Submit description</button>
+      </div>
+    </div>
+    <div class="app__step-content" data-go-item="3">
+      <h5 class="app__title">Are you happy now?</h5>
+      <div class="app__buttons">
+        <button class="btn" type="button" data-go="prev">No, go back</button>
+        <button class="btn" type="button" data-go="next">Yes, go ahead</button>
+      </div>
+    </div>
+    <div class="app__step-content" data-go-item="4">
+      <h5 class="app__title">Ok, we're done. Thanks for sending us your data!</h5>
+    </div>
+  </div>
 
   <script src="./index.js"></script>
 </body>

@@ -1,21 +1,5 @@
-# Template for FrontLoops [Elements] challenge
+# Progress navigation
 
-Install all dependencies
-```bash
-npm i
-```
-
-For start watching all files use:
-```bash
-npm run start
-```
-
-then open in browser
-```bash
-http://localhost:1234/
-```
-
-For build all files use:
-```bash
-npm run build
-```
+Create a progress navigation with previous/next buttons on each step and an overview of all steps.
+Clicking next button on last step should bring the final screen.
+Steps in overview should be also clickable and change current step to the one click, however you shouldn't be able to skip the next step, so if you're at 1 step - you can't go directly to 3.
