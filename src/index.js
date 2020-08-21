@@ -24,14 +24,13 @@ import './style.scss';
   });
 
   function showCurrentStep(step) {
-    const currentBlock = [...stepContents].find((el) => el.dataset.goItem * 1 === step);
-    const stepButtonsActive = [...stepButtons].filter((el) => el.dataset.go * 1 <= step);
+    [...stepButtons].forEach((el) => {
+      el.classList.toggle('is-active', el.dataset.go * 1 <= step);
+    });
 
-    if (!currentBlock) return;
-
-    [...stepContents, ...stepButtons].forEach((el) => el.classList.remove('is-active'));
-    stepButtonsActive.forEach((el) => el.classList.add('is-active'));
-    currentBlock.classList.add('is-active');
+    [...stepContents].forEach((el) => {
+      el.classList.toggle('is-active', el.dataset.goItem * 1 === step);
+    });
   };
 
 })();
