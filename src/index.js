@@ -11,15 +11,13 @@ import './style.scss';
     el.addEventListener('click', (evt) => {
       evt.preventDefault();
       let elData = el.dataset.go;
+      if ( elData * 1 - currentStep >= 2 ) return;
 
       if (elData === 'next') elData = currentStep + 1;
       if (elData === 'prev') elData = currentStep - 1;
+      currentStep = elData * 1;
 
-      if ( elData * 1 - currentStep < 2 ) {
-        currentStep = elData * 1;
-        showCurrentStep(currentStep);
-      };
-
+      showCurrentStep(currentStep);
     });
   });
 
